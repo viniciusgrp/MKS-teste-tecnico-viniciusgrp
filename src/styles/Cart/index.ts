@@ -14,11 +14,6 @@ const CartStyle = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  animation: openingCart 1s ease;
-
-  .closingCart {
-    animation: closeCart 1s ease;
-  }
 
   header {
     display: flex;
@@ -106,6 +101,10 @@ const CartStyle = styled.div`
     .btnCartFinish {
       height: 100px;
     }
+  }
+
+  .openCart {
+    animation: opaningCart 1s linear;
   }
 
   @keyframes openingCart {

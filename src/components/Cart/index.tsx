@@ -4,18 +4,35 @@ import CartStyle from "../../styles/Cart";
 import CartProduct from "../CartProduct";
 import { hideModal } from "../../store/modules/cartModal/action";
 import {IProducts} from '../../pages/Store'
-import { IProduct } from "../ProductCard";
+import './index.css'
+
+interface IState {
+  product: {
+    reduce(arg0: (acc: any, act: any) => any, arg1: number): unknown;
+    map(
+      arg0: (product: any, index: any) => JSX.Element
+    ): import("react").ReactNode;
+    brand: string;
+    createdAt: string;
+    description: string;
+    id: number;
+    name: string;
+    photo: string;
+    price: string;
+    updatedAt: string;
+  }
+}
 
 const Cart = () => {
-  const [animation, setAnimation] = useState<boolean>(false)
-  const productCart: IProducts = useSelector((state) => state.product);
+  const [animation, setAnimation] = useState<boolean>(true)
+  const productCart: IProducts = useSelector((state:IState) => state.product);
   console.log(productCart)
   const total: any = productCart.reduce((acc, act) => acc += (act.price * act.quantity), 0)
 
   const dispatch = useDispatch();
 
   const handleHideModal = () => {
-    setAnimation(true)
+    setAnimation(false)
     setTimeout(() => dispatch(hideModal()), 1100) };
 
   useEffect(() => {
@@ -23,7 +40,8 @@ const Cart = () => {
   }, [total])
 
   return (
-    <CartStyle className={!animation ? "openingCart" : "closingCart"}>
+    <div className="cart openCart">
+      <CartStyle className={animation ? 'openCart' : 'closeCart'}>
       <div className="topCart">
       <header>
         <h2>Carrinho de compras</h2>
@@ -48,6 +66,7 @@ const Cart = () => {
       <button className="btnCartFinish">Finalizar Compra</button>
       </div>
     </CartStyle>
+    </div>
   );
 };
 

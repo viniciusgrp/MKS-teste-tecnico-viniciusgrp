@@ -1,5 +1,6 @@
 import { toast } from "react-toastify";
 
+
 export const addCartToast = () => toast.success("Login realizado com sucesso", {
     position: "top-right",
     autoClose: 1200,

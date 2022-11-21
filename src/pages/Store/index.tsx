@@ -40,10 +40,14 @@ export interface IProducts {
   updatedAt: string;
 }
 
+interface IState {
+  cartModal: boolean
+}
+
 const Store = () => {
   const [products, setProducts] = useState<IProducts | null>(null);
 
-  const showCart = useSelector((state) => state.cartModal);
+  const showCart = useSelector((state:IState) => state.cartModal);
 
   useEffect(() => {
     async function getProducts() {

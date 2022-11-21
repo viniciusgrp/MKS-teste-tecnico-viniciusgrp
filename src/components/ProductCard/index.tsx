@@ -5,10 +5,6 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../../store/modules/addProduct/action";
 
 export interface IProduct {
-  reduce(arg0: (acc: any, act: any) => any, arg1: number): unknown;
-  map(
-    arg0: (product: any, index: any) => JSX.Element
-  ): import("react").ReactNode;
   product: {
     brand: string;
     createdAt: string;

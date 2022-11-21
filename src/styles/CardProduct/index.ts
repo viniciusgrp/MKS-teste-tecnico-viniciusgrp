@@ -4,7 +4,7 @@ const Card = styled.li`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 80%;
+    max-width: 250px;
     margin: 0 auto;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
     border-radius: 10px;

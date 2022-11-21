@@ -1,0 +1,27 @@
+.openCart {
+  animation: openingCart 1s linear;
+}
+
+.closeCart {
+  animation: closingCart 1s forwards;
+}
+
+@keyframes openingCart {
+  0%{
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes closingCart {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
