@@ -12,4 +12,8 @@ export const ButtonPrimary = styled.button`
     font-size: 14px;
     font-weight: 600;
     border: none;
+
+    /* :active {
+        background-color: var(--color-primary-2);
+    } */
 `

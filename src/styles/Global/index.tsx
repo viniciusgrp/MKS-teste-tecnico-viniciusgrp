@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const Global = createGlobalStyle`
     :root {
         --color-primary: #0F52BA;
+        --color-primary-2: #0b3169;
         --grey: #373737;
         --grey-2: #EEEEEE;
     }
@@ -56,6 +57,9 @@ const Global = createGlobalStyle`
     table {
         border-collapse: collapse;
         border-spacing: 0;
+    }
+    button {
+        cursor: pointer;
     }
 `;
 

@@ -1,13 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Card = styled.li`
-    display: flex;
+const Skeleton = styled.li`
+   display: flex;
     flex-direction: column;
     gap: 10px;
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
     border-radius: 10px;
+    background-color: #dddddd;
+    position: relative;
 
     .productImg {
         width: 100%;
@@ -15,6 +17,9 @@ const Card = styled.li`
 
         display: flex;
         justify-content: center;
+
+        background-color: #cccccc;
+        border-radius: 5px 5px 0 0;
 
         img {
             max-height: 100%;
@@ -39,7 +44,7 @@ const Card = styled.li`
             display: flex;
             align-items: center;
 
-            background-color: var(--grey);
+            background-color: #cccccc;
             color: white;
 
             padding: 10px 10px ;
@@ -60,11 +65,38 @@ const Card = styled.li`
         height: 3em;
         overflow: hidden;
     }
+    
+    button {
+        background-color: #cccccc;
+    height: 40px;
+    border-radius: 0px 0px 8px 8px;
+    border: none;
+    }
 
     @media screen and (min-width: 768px){
         width: 22%;
         
     }
+
+    .ligth {
+        height: 100%;
+        width: 100%;
+        background-color: #eeee;
+        opacity: 0.3;
+        animation: loading 1.2s infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
 `
 
-export default Card
+export default Skeleton
