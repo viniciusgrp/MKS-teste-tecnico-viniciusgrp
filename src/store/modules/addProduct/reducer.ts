@@ -21,7 +21,7 @@ const cartReducer = (state:IProduct[] = [], action: any) => {
           existe.quantity--;
           return [...state];
         } else {
-          const remove = state.filter((elem:IProduct) => elem.name !== existes?.name);
+          const remove = state.filter((elem:IProduct) => elem.name !== existe?.name);
           return remove;
         }
       }
