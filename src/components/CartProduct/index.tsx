@@ -32,7 +32,7 @@ const CartProduct = ({ product }:IProduct) => {
   const handleDeleteProduct = () => dispatch(deleteProduct(product));
 
   return (
-    <CartProductStyle>
+    <CartProductStyle key={product.id}>
       <div className="cartProductImg">
         <img src={product.photo} alt="Produto" />
         <button className="cartBtnRemove" onClick={handleDeleteProduct}>X</button>

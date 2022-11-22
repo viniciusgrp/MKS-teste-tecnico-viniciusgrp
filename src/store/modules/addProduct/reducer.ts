@@ -2,7 +2,6 @@ import { IProduct } from "../../../components/ProductCard";
 
 const cartReducer = (state:IProduct[] = [], action: any) => {
   let { product } = action;
-  console.log(action);
   switch (action.type) {
       case "ADD_PRODUCT":
           const existes = state.find((elem:IProduct) => elem.name === product.name);

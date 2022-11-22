@@ -23,7 +23,6 @@ interface IState {
 
 const Header = () => {
     const productCart = useSelector((state:IState) => state.product);
-    console.log('header', productCart)
 
     const items: any = productCart.reduce((acc, act) => acc += act.quantity, 0)
     
