@@ -26,7 +26,6 @@ interface IState {
 const Cart = () => {
   const [animation, setAnimation] = useState<boolean>(true)
   const productCart: IProducts = useSelector((state:IState) => state.product);
-  console.log(productCart)
   const total: any = productCart.reduce((acc, act) => acc += (act.price * act.quantity), 0)
 
   const dispatch = useDispatch();
@@ -34,10 +33,6 @@ const Cart = () => {
   const handleHideModal = () => {
     setAnimation(false)
     setTimeout(() => dispatch(hideModal()), 1100) };
-
-  useEffect(() => {
-    console.log(total)
-  }, [total])
 
   return (
     <div className="cart openCart">

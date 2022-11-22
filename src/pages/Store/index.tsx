@@ -54,7 +54,6 @@ const Store = () => {
       const { data } = await Api.get<IApiResponse>(
         "products?page=1&rows=8&sortBy=id&orderBy=ASC"
       );
-      console.log(data);
       setProducts(data.products);
     }
 
