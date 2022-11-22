@@ -67,7 +67,7 @@ const Store = () => {
       <ProductList>
         {products ? (
           products.map((product:IProducts) => (
-            <Card product={product} />
+            <Card product={product} name={""} quantity={0} />
           ))
         ) : (
           <CardSkeleton />

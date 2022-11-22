@@ -61,6 +61,9 @@ const Global = createGlobalStyle`
     button {
         cursor: pointer;
     }
+    body {
+        overflow-x: hidden;
+    }
 `;
 
 export default Global;

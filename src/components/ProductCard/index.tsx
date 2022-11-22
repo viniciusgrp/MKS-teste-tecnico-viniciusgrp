@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../../store/modules/addProduct/action";
 
 export interface IProduct {
+  name: string;
+  quantity: number;
   product: {
     brand: string;
     createdAt: string;

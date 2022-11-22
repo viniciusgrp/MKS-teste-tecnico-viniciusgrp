@@ -1,4 +1,4 @@
-const cartModal = (state = false, action) => {
+const cartModal = (state = false, action: any) => {
   switch (action.type) {
     case "SHOW_MODAL":
       return true;
